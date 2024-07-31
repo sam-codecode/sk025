@@ -535,12 +535,7 @@ section{
         padding: 11px 24px;
     }
 }
-@media(max-width:530px){
-    .button-style{
-        padding: 10px 22px;
-        font-size: 12px;
-    }
-}
+
 
 @media(max-width:512px){
     .logo{
@@ -550,15 +545,19 @@ section{
         margin-left: 50px;
     }
     header{
-        padding: 33px 1%;
-    }
+    padding: 15px 3%;
+    transition: .2s;
+}
 }
 @media(max-width:483px){
     .card p{
         font-size: 12px;
     }
+    .hero-text{
+    padding-top: 0px;
+    }
 }
-@media(max-width:480px){
+@media(max-width:497px){
     .logo{
         font-size: 17px;
     }
@@ -578,6 +577,9 @@ section{
     .hero-text p{
         font-size: 13px;
     }
+    .hero-text{
+    padding-top: 0px;
+    }
    
     
 }
@@ -590,6 +592,9 @@ section{
     }
     .back-button{
         padding: 8px 18px;
+    }
+    .hero-text{
+    padding-top: 0px;
     }
 }
 @media (max-width:475px){
@@ -605,22 +610,17 @@ section{
     .buang {
         display: none;
     }
-    .button-style{
-        padding: 7px 17px;
-    }
-    .back-button{
-        padding: 7px 17px;
-    }
+   
     .card p{
-        font-size: 12px;
+        font-size: 11px;
+    }
+    .hero-text{
+    padding-top: 0px;
     }
     
 }
 @media(max-width:442px){
-    .button-style{
-        padding: 5px 13px ;
-        font-size: 10px;
-    }
+    
     .hero-text h1{
         font-size: 28px;
     }
@@ -630,29 +630,31 @@ section{
     .hero-text h4{
         font-size: 12px;
     }
-    .back-button{
-        padding: 5px 13px;
-        font-size: 10px;
+    .hero-text{
+    padding-top: 0px;
+    }
+   
+}
+@media(max-width:389px){
+    
+    .hero-text{
+    padding-top: 0px;
+    }
+    .navlist{
+        margin-left: 15px;
     }
 }
-@media(max-width:379px){
-    .button-style{
-        padding: 5px 12px ;
-        font-size: 9px;
-    }
-    .hero-text h1{
-        font-size: 25px;
-    }
-    .hero-text h5{
-        font-size: 11px;
-    }
-    .hero-text h4{
-        font-size: 11px;
-    }
-    .back-button{
-        padding: 5px 12px;
-        font-size: 10px;
-    }
+@media(max-width:368px){
+        .hero-text h1{
+            font-size: 24px;
+        }
+        .hero-text p{
+            font-size: 11px;
+        }
+        .buang2{
+            display: none;
+        }
+        
 }
 
     </style>
@@ -667,7 +669,7 @@ section{
     <ul class="navlist">
     <li><a class="buang" href="#" onclick="home ()">Home</a></li>
     <li><a href="#" onclick="about ()">About</a></li>
-    <li><a href="#" onclick="contact()">Contact</a></li>
+    <li><a class="buang2" href="#" onclick="contact()">Contact</a></li>
     <li><a href="https://drive.google.com/drive/folders/1CJwtNuyhS_26IPEg6BJgfM7A7mc6PS0Y?usp=sharing" target="_blank">PSPM</a> </li>
 </ul>
 
@@ -749,7 +751,7 @@ section{
         <h1>CONTACT</h1>
          <div class="icons">
             <a class="icons" href="https://www.instagram.com/samuel_official_oo?igsh=aGgwcjN1eTQzMHkw" target="_blank"><i class="ri-instagram-line"></i></a>
-            <a  class="icons" href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKhbzLphFVTkZdFLgvsJhPMwcFQVVDFvmKWhFPGrkBSWktJPshrmzCwXXKRVjbXdHpvSqbh" target="_blank"><i class="ri-mail-line"></i></a>
+            
          </div>
          </div>
 
@@ -953,7 +955,7 @@ function about(){
                 <h1>CONTACT</h1>
                   <div class="icons">
                     <a  href="https://www.instagram.com/samuel_official_oo?igsh=aGgwcjN1eTQzMHkw" target="_blank"><i class="ri-instagram-line"></i></a>
-                    <a  href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKhbzLphFVTkZdFLgvsJhPMwcFQVVDFvmKWhFPGrkBSWktJPshrmzCwXXKRVjbXdHpvSqbh" target="_blank"><i class="ri-mail-line"></i></a>
+                    
                  </div>
                 </div>
                <button id="backButton" class="back-button" onclick="showMainContent()">Back</button>

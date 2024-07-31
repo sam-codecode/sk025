@@ -1,0 +1,1011 @@
+
+<!DOCTYPE html>
+<html class="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHEMISTRY SEMESTER 2</title>
+<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+  rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<style>
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #4d4a84 0%, #39366a 28.53%, #13113a 75.52%);
+    
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 14, 14, 0.7); /* Dark overlay background */
+    backdrop-filter: blur (1px); /* Blur effect */
+    display: none;
+    z-index: 1; /* Ensure it is below other content */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.overlay.show {
+    display: block;
+    opacity: 1;
+}
+.overlay2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(og1-removebg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.overlay2.show{
+    display: block;
+    opacity: 3;
+}
+.overlay3{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image:url(sam.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.overlay3.show{
+    display: block;
+    opacity: 2;
+}
+
+header{
+    position: fixed; 
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+}
+.navlist{
+    display: flex;
+    list-style-type: none;
+}
+.navlist a{
+    color:white;
+    margin-left:60px;
+    font-size:20px;
+    font-weight: 800;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+header ul li a {
+    color: white;
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+header ul li a:hover {
+
+    color:black;
+}
+.navlist a:hover{
+
+    border-bottom: 2px solid white;
+}
+#menu-icon{
+    color:white;
+    font-size:35px;
+    z-index:1002;
+    cursor: pointer;
+    display: none;
+}
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #4d4a84 0%, #39366a 28.53%, #13113a 75.52%);
+    position:relative;
+    display:flex;
+                                    
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    z-index: 2;
+}
+section{
+    padding: 0 19%;
+}
+
+.hero-text h5{
+
+    font-size:15px;
+    font-weight: 400;
+    color:white;
+    margin-bottom: 40px;
+}
+.hero-text h1{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    line-height: 1; 
+    color:white;
+    margin:0 0 45px
+}
+.hero-text h4{
+
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+.hero-text p{
+
+    font-size: 15px;
+    color:white;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+.image img{
+
+    width: 400px;
+    height: auto;
+}
+.icons{
+
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    padding:0 9%;
+    transform: translateY(-40%);
+}
+
+
+.icons i{
+    display: block;
+    margin: 30px 0; 
+    margin-bottom: 70px; 
+    font-size: 50px;
+    color: white;
+    transition: all .50s ease;
+}
+.icons i:hover{
+    color: #4d4a84;
+    transform: translateY(-5px);
+}
+.scrollDown{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+    text-decoration: none;
+}
+.scrollDown i{
+
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: #4d4a84;
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+.scrollDown i:hover{
+    transform: translateY(-5px);
+    
+}
+
+.chapter-content {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.chapter-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1004;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.chapter-content.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+          opacity: 0;
+            transform: translateY(40px);
+        }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+     }
+}
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+         transform: translateY(0);
+        }
+    to {
+         opacity: 0;
+            transform: translateY(40px);
+     }
+}
+
+.back-button {
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 1003; 
+    display: none;
+    
+}
+.hidebutton{
+    display: none;
+}
+
+.button-style, .back-button {
+display: inline-block;
+color: white;
+background: #4d4a84;
+border: 1px solid transparent;
+padding: 12px 30px;
+text-decoration: none;
+line-height: 1.4;
+font-size: 14px;
+font-weight: 500;
+border-radius: 30px;
+text-transform: uppercase;
+transition: all .55s ease;
+}
+.button-style:hover, .back-button:hover {
+background: transparent;
+border: 1px solid white;
+transform:translateZ (10px);
+}
+.chapter-buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px; 
+    margin-bottom: 20px; 
+}
+@property --gradient-angle{
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+    @keyframes rotation{
+        0% {--gradient-angle: 0deg;}
+        100% {--gradient-angle: 360deg;}
+    }
+:root{
+    --clr-1:#052b2f;
+    --clr-2:#073438;
+    --clr-3:#0e4b50;
+    --clr-4: #2d8f85;
+    --clr-5: #637c54;
+}
+.card{
+        height:60vh;
+        aspect-ratio:1/1.5;
+        background:var(--clr-1);
+        border-radius:0.5rem;
+        position: relative;
+
+    }
+.card h1 {
+    font-size: 19px;
+    line-height: 1;
+    font-weight: 700;
+    color:white;
+    margin-bottom: 20px;
+}
+.card p{
+    font-size: 13px;
+    color:white;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+.card::before,
+.card::after{
+    content:"";
+    position: absolute;
+    inset: -1rem;
+    z-index: -1;
+    background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3));
+    border-radius: inherit;
+    animation: rotation 4s linear infinite;
+}
+.card::after{
+    filter:blur(0.3rem);
+}
+.card a{
+    color: rgb(237, 255, 79);
+        text-decoration: none;
+        transition: color 0.3s ease;
+}
+.card a:hover{
+    border-bottom: 2px solid white;
+}
+
+@media (max-width: 1535px ){
+header{
+    padding: 15px 3%;
+    transition: .2s;
+}
+.icons{
+    padding: 0 3%;
+    
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    transition: .2s;
+}
+.scrollDown{
+    right: 3%;
+    transition: .2s;
+}
+}
+
+@media (max-width:1460px) {
+ section{
+    padding: 0 12%;
+    transition: .2s;
+    }
+}
+@media(max-width:1340px) {
+.image img{
+    width: 100%;
+    height: auto;
+    }
+.hero-text h1 {
+    font-size: 75px;
+    margin:0 0 30px;
+    }
+.hero-text h5{
+    margin-bottom: 25px;
+    }
+.icons {
+    top: 40%;
+    left: 25%;
+}    
+
+}
+
+@media(max-width:1320px){
+    .icons{
+        left:40% ;
+    }
+}
+
+@media (max-width:1195px) {
+section{
+    padding: 0 3%;
+    transition: .2s;
+    }
+.hero-text{
+    padding-top: 115px;
+    }
+.image {
+    text-align: center;
+    }
+.image img{
+    width: 560px;
+    height: auto;
+    }
+.hero{
+    height: 100%;
+    gap:1rem;
+    grid-template-columns: 1fr;
+    }
+
+
+}
+@media(max-width:1100px){
+    .hero-text button{
+        
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        margin-right: 20px;
+        
+    }
+    .hero-text h1{
+        font-size: 60px;
+    }
+    .hero-text h5{
+        font-size:23px ;
+    }
+    .hero-text h4{
+        font-size: 17px;
+    }
+
+}
+@media (max-width:990px) {
+
+.image img{
+    display: none;
+}
+}
+@media(max-height:718px){
+    .card p{
+        font-size: 11px;
+        margin-bottom: 17px;
+    }
+}
+
+
+@media (max-width:775px){
+    .hero h1{
+        font-size:50px;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    .navlist a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:645px){
+    .hero h1{
+        font-size:45px;
+    }
+    .logo{
+        font-size: 23px;
+    }
+    .navlist a{
+        font-size: 14px;
+        margin-left: 55px;
+    }
+    .button-style{
+        padding: 11px 27px;
+    }
+    .back-button{
+        padding: 11px 27px;
+    }
+}
+
+@media (max-width:580px){
+    .hero h1{
+        font-size:37px;
+    }
+    .logo{
+        font-size: 23px;
+    }
+    .navlist a{
+        font-size: 11px;
+    }
+    .button-style{
+        padding: 11px 24px;
+    }
+}
+@media(max-width:530px){
+    .button-style{
+        padding: 10px 22px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:512px){
+    .logo{
+        font-size: 18px;
+    }
+    .navlist{
+        margin-left: 50px;
+    }
+    header{
+        padding: 33px 1%;
+    }
+}
+@media(max-width:483px){
+    .card p{
+        font-size: 12px;
+    }
+}
+@media(max-width:480px){
+    .logo{
+        font-size: 17px;
+    }
+    .navlist{
+        margin-left: 10px;
+    }
+    
+    .hero-text h1{
+        font-size: 34px;
+    }
+    .hero-text h5{
+        font-size: 14px;
+    }
+    .hero-text h4{
+        font-size: 14px;
+    }
+    .hero-text p{
+        font-size: 13px;
+    }
+   
+    
+}
+@media (max-width:475px){
+    .navlist{
+        margin-left: 35px;
+    }
+    .button-style{
+        padding: 8px 18px;
+    }
+    .back-button{
+        padding: 8px 18px;
+    }
+}
+@media (max-width:475px){
+    .logo{
+        font-size: 15 px;
+    }
+    .navlist{
+        margin-left: 30px;
+    }
+    .hero-text h1{
+        font-size:32px;
+    }
+    .buang {
+        display: none;
+    }
+    .button-style{
+        padding: 7px 17px;
+    }
+    .back-button{
+        padding: 7px 17px;
+    }
+    .card p{
+        font-size: 12px;
+    }
+    
+}
+@media(max-width:442px){
+    .button-style{
+        padding: 5px 13px ;
+        font-size: 10px;
+    }
+    .hero-text h1{
+        font-size: 28px;
+    }
+    .hero-text h5{
+        font-size: 12px;
+    }
+    .hero-text h4{
+        font-size: 12px;
+    }
+    .back-button{
+        padding: 5px 13px;
+        font-size: 10px;
+    }
+}
+@media(max-width:379px){
+    .button-style{
+        padding: 5px 12px ;
+        font-size: 9px;
+    }
+    .hero-text h1{
+        font-size: 25px;
+    }
+    .hero-text h5{
+        font-size: 11px;
+    }
+    .hero-text h4{
+        font-size: 11px;
+    }
+    .back-button{
+        padding: 5px 12px;
+        font-size: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+<div class="overlay" id="overlay">
+    </div> <div class="overlay2" id="overlay2">
+    </div> <div class="overlay3" id="overlay3"></div>
+    <div id="mainContent" >
+<header> 
+    <a href="#" class="logo">SAM-CO</a>
+    <ul class="navlist">
+    <li><a class="buang" href="#" onclick="home ()">Home</a></li>
+    <li><a href="#" onclick="about ()">About</a></li>
+    <li><a href="#" onclick="contact()">Contact</a></li>
+    <li><a href="https://drive.google.com/drive/folders/1CJwtNuyhS_26IPEg6BJgfM7A7mc6PS0Y?usp=sharing" target="_blank">PSPM</a> </li>
+</ul>
+
+</header>
+<section class="hero"> 
+  <div class="hero-text" > 
+    <h5>PAL LEADER 2023/2024</h5>
+    <h4>SAM PRESENTS</h4>
+    <h1>CHEMISTRY SEMESTER 2</h1>
+    <p>""The future belongs to those who believe in the beauty of their dreams." <br>"Raise A Dream"</p>
+
+    <button class="button-style" onclick="notesButtons()">NOTES</button>
+    <button class="button-style" onclick="lectureButtons()">LECTURE VIDEOS</button>
+    <button class="button-style" onclick="eksButtons()">EXPERIMENT</button>
+</div>
+   <div class="image">
+     <img src="og1-removebg.png">
+   </div>
+ </section>
+ <div class="bx bx-menu" id="menu-icon"></div>
+</div>
+<div id="chapterContent1" class="chapter-content">
+    <div class="chapter-buttons"> 
+    <button class="button-style" onclick="openPdf('C1.pdf')">Chapter 1</button> 
+    <button class="button-style" onclick="openPdf('C2.pdf')">Chapter 2</button> 
+    <button class="button-style" onclick="openPdf ('C3.pdf')">Chapter 3</button> 
+    <button class="button-style" onclick="openPdf ('C4.pdf')">Chapter 4</button> 
+    <button class="button-style" onclick="openPdf('C5.pdf')">Chapter 5</button> 
+    <button class="button-style" onclick="openPdf('C6.pdf')">Chapter 6</button> 
+    <button class="button-style" onclick="openPdf('C7.pdf')">Chapter 7</button> 
+    <button class="button-style" onclick="openPdf('C8.pdf')">Chapter 8</button> 
+    <button class="button-style" onclick="openPdf ('C9.pdf')">Chapter 9</button>
+     <button class="button-style" onclick="openPdf ('C10.pdf')">Chapter 10</button> 
+     <button class="button-style" onclick="openPdf ('C11.pdf')">Chapter 11</button> 
+     <button class="button-style" onclick="openPdf ('C12.pdf')">Chapter 12</button>
+      </div>
+      
+ </div>
+
+<div id="chapterContent2" class="chapter-content">
+     <div class="chapter-buttons"> 
+        <button class="button-style" onclick="openLectureVideo('https://www.youtube.com/watch?v=FVJDfXnPitA&list=PLg95bsazufL81w0G7f9oQY1JLB_8ty1ge')">Lecture 1></button>
+        <button class="button-style" onclick="openLectureVideo('https://www.youtube.com/watch?v=e2AQHX4FIpQ&list=PLg95bsazufL81R9AZdBqWzq2IJTn7CD2V')">Lecture 2</button> 
+        <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=89P3zp1VzY4&list=PLg95bsazufL-D0bqP10CfjNg1rSYyqCT0')">Lecture 3</button> 
+        <button class="button-style" onclick="openLectureVideo('https://www.youtube.com/watch?v=Jf2z34i-UzQ&list=PLg95bsazufL-Be5RzZCg-06rlojWfwUUm')">Lecture 4</button> 
+        <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=7mg09mps TaM&list=PLg95bsazufL-AgYMoa9YCoZxpilprbd0D')">Lecture 5</button> 
+        <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=70qd4m7K5wA&list=PLg95bsazufL_KKZ107UJMUGuGf8CJ059')">Lecture 6</button> 
+        <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=Jie4Z78n9zQ&list=PLg95bsazufL8IR367g-nx7XzAIj-3w14j')">Lecture 7</button>
+        <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=CEm1JjMqFUA&list=PLg95bsazufL-10p-RmXa3QeWo_4aem4YF')">Lecture 8</button>
+         <button class="button-style" onclick="openLectureVideo('https://www.youtube.com/watch?v=b2qBS4apnxA&list=PLg95bsazufL9jgWDtkPk0175x9hebeqR2')">Lecture 9</button> 
+         <button class="button-style" onclick="openLectureVideo('https://www.youtube.com/watch?v=0uNEYCCM4dg&list=PLg95bsazufL8i1PIYxTqavpjx6VSpq8Ri')">Lecture 10</button>
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=1sWP1U7141M&list=PLg95bsazufL-rFyoT_bezPtNrwIJ1Fhoe')">Lecture 11</button> 
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=8eIQGQi537M&list=PLg95bsazufL_bqfETeW24co-3smK9_qX9')">Lecture 12</button>
+           </div>
+           
+</div>
+
+
+<div id="chapterContent3" class="chapter-content">
+     <div class="chapter-buttons">
+        <button class="button-style" onclick="openExperimentVideo('https://youtu.be/1Ppr6JPRfPw?si=k-i3_X76xta411B2')">Experiment 1</button> 
+        <button class="button-style" onclick="openExperimentVideo('https://youtu.be/dpXn0V2mIFM?si=EHUFo3gRwFZEcYna')">Experiment 2</button> 
+        <button class="button-style" onclick="openExperimentVideo('https://youtu.be/qUVpDsoLVn0?si=ZJzicSgng0zt83me')">Experiment 3</button> 
+        <button class="button-style" onclick="openExperimentVideo ('https://youtu.be/ixjdffCuEnA?si=Q1_c_VTPvivDFgUB')">Experiment 4</button> 
+        <button class="button-style" onclick="openExperimentVideo('https://youtu.be/n8JW-8Yvi_E?si=vRLIJGQLVGPXvgpo')">Experiment 5</button> 
+        <button class="button-style" onclick="openExperimentVideo ('https://youtu.be/6pUU9Kv7tgo?si=2zaFIrVK7AFW0bbM')">Experiment 6</button> 
+        </div>
+        
+    </div>
+  <div id="chapterContent4" class="chapter-content">
+     <div class="card"> 
+        <h1>ABOUT</h1>
+            <p>"Hello. My name is Samuel Raj. I am a Chemistry Pal Leader for the session 2023/2024. At that time, I was very grateful for my position because I can help my college friends without expecting anything in return. I like to help them to make understand the topics and guide them with questions that they don't understand. I often make sessions with those who wants. Now in my spare time, I'm practicing programming because I want to pursue my first degree in computer science field majoring in AI/software engineer.With knowledge of programming, I started to create a chemistry website. This is not an expert website but at least I tried my best to create and I've provided materials. With the hope that students would use it, I built websites for both semesters. Here is the link for "<a href="https://sam-codecode.github.io/chemistry-semester1/" target="_blank">Chemistry Semester 1</a> </p>
+      </div>
+      
+    </div>
+ <div id="chapterContent5" class="chapter-content" > 
+    <div class="card"></div>
+        <h1>CONTACT</h1>
+         <div class="icons">
+            <a class="icons" href="https://www.instagram.com/samuel_official_oo?igsh=aGgwcjN1eTQzMHkw" target="_blank"><i class="ri-instagram-line"></i></a>
+            <a  class="icons" href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKhbzLphFVTkZdFLgvsJhPMwcFQVVDFvmKWhFPGrkBSWktJPshrmzCwXXKRVjbXdHpvSqbh" target="_blank"><i class="ri-mail-line"></i></a>
+         </div>
+         </div>
+
+        </div>
+        <div class="hidebutton">
+            <button id="backButton" class="back-button" onclick="showMainContent()">Back</button>
+        </div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+    let menu=document.querySelector('#menu-icon');
+    let navlist=document.querySelector('.navlist');
+    menu.onclick=()=>{
+    menu.classList.toggle('bx-x'); navlist.classList.toggle('open');
+    };
+    const sr=ScrollReveal({
+    distance: '65px',
+    duration: 2600,
+    delay: 450,
+    reset:true
+    });
+    sr.reveal('.hero-text', {delay: 200, origin: 'top'}); 
+    sr.reveal('.image', {delay: 450, origin: 'top'}); 
+    sr.reveal('.icons', {delay: 500,origin:'left'}); 
+    sr.reveal('.scrollDown', {delay: 500, origin: 'right'});
+
+
+
+
+function notesButtons() {
+    const mainContentDiv = document.getElementById("mainContent");
+    const chapterContent1Div = document.getElementById("chapterContent1");
+   const backButton = document.getElementById("backButton");
+   
+    const overlay= document.getElementById("overlay");
+    const overlay2=document.getElementById("overlay2");
+
+    mainContentDiv.style.display='none';
+    chapterContent1Div.classList.add('show');
+    overlay.classList.add('show');
+    overlay2.classList.add('show');
+    mainContentDiv.style.animation = 'fadeOutDown 0.5s forwards';
+    chapterContent1Div.style.animation='fadeInUp 0.5s forwards';
+    backButton.style.display = 'none';
+    
+   
+
+    chapterContent1Div.innerHTML= `
+        <div class="chapter-buttons">
+            <button class="button-style" onclick="openPdf('C1.pdf')">Chapter 1</button>
+             <button class="button-style" onclick="openPdf ('C2.pdf')">Chapter 2</button> 
+             <button class="button-style" onclick="openPdf ('C3.pdf')">Chapter 3</button> 
+              <button class="button-style" onclick="openPdf ('C4.pdf')">Chapter 4</button> 
+             <button class="button-style" onclick="openPdf ('C5.pdf')">Chapter 5</button> 
+             <button class="button-style" onclick="openPdf ('C6.pdf')">Chapter 6</button> 
+             <button class="button-style" onclick="openPdf ('C7.pdf')">Chapter 7</button>
+             <button class="button-style" onclick="openPdf ('C8.pdf')">Chapter 8</button>
+              <button class="button-style" onclick="openPdf ('C9.pdf')">Chapter 9</button> 
+              <button class="button-style" onclick="openPdf ('C10.pdf')">Chapter 10</button>
+              <button class="button-style" onclick="openPdf ('C11.pdf')">Chapter 11</button>
+              <button class="button-style" onclick="openPdf ('C12.pdf')">Chapter 12</button>
+        </div>
+        <button id="backButton" class="back-button" onclick="showMainContent()">Back</button>
+     `;
+        showContent('chapterContent1');
+}
+function lectureButtons() {
+    const mainContentDiv=document.getElementById("mainContent");
+    const chapterContent2Div=document.getElementById("chapterContent2");
+    const backButton=document.getElementById("backButton");
+    
+    const overlay = document.getElementById("overlay");
+    const overlay2 = document.getElementById("overlay2");
+
+    mainContentDiv.style.display='none';
+    chapterContent2Div.classList.add('show');
+    overlay.classList.add('show');
+    overlay2.classList.add('show');
+    mainContentDiv.style.animation = 'fadeOutDown 0.5s forwards';
+    chapterContent2Div.style.animation='fadeInUp 0.5s forwards';
+    backButton.style.display='none';
+    
+
+    
+    chapterContent2Div.innerHTML= `
+    <div class="chapter-buttons"> 
+         <button class="button-style" onclick="openLectureVideo('https://www.youtube.com/watch?v=FVJDfXnPitA&list=PLg95bsazufL81w0G7f9oQY1JLB_8ty1ge')">Lecture 1</button>
+         <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=e2AQHX4FIpQ&list=PLg95bsazufL81R9AZdBqWzq2IJTn7CD2V')">Lecture 2</button>
+         <button class="button-style" onclick="openLectureVideo('https://www.youtube.com/watch?v=89P3zp1VzY4&list=PLg95bsazufL-D0bqP10CfjNg1rSYyqCT')">Lecture 3</button>
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=Jf2z341-UzQ&list=PLg95bsazufL-Be5RzZCg-06rlojWfwUUm')">Lecture 4</button> 
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=7mg09mpsTaM&list=PLg95bsazufL-AgYMoa9YCoZxpilprbd0D')">Lecture 5</button> 
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=70qd4m7K5wA&list=PLg95bsazufL_KKZ107UJMUGUGF8CJ059s ')">Lecture 6</button> 
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=Jie4Z78n9zQ&list=PLg95bsazufL8IR367g-nx7XzAIj-3w14j')">Lecture 7</button> 
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=CEm1JjMqFUA&list=PLg95bsazufL-10p-RmXa3QeWo_4aem4YF')">Lecture 8</button> 
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=b2qBS4apnxA&list=PLg95bsazufL9jgWDtkPk0175x9hebeqR2')">Lecture 9</button> 
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=0uNEYCCM4dg&list=PLg95bsazufL8i1PIYxTqavpjx6VSpq8Ri')">Lecture 10</button> 
+          <button class="button-style" onclick="openLectureVideo ('https://www.youtube.com/watch?v=1sWP1U7141M&list=PLg95bsazufL-rFyoT_bezPtNrwIJ1Fhoe')">Lecture 11</button> 
+          <button class="button-style" onclick="openLectureVideo('https://www.youtube.com/watch?v=8eIQGQ1537M&list=PLg95bsazufL_bqfETeW24co-3smK9_qX9')">Lecture 12</button> 
+          </div>
+          <button id="backButton" class="back-button" onclick="showMainContent()">Back</button>
+    `;
+    showContent('chapterContent2');
+}
+function eksButtons() {
+    const mainContentDiv = document.getElementById("mainContent");
+    const chapterContent3Div=document.getElementById("chapterContent3");
+    const backButton= document.getElementById("backButton");
+    
+    const overlay= document.getElementById("overlay");
+     const overlay2 = document.getElementById("overlay2");
+
+    mainContentDiv.style.display='none';
+    chapterContent3Div.classList.add('show');
+    overlay.classList.add('show');
+    overlay2.classList.add('show');
+    mainContentDiv.style.animation = 'fadeOutDown 0.55 forwards';
+    chapterContent3Div.style.animation = 'fadeInUp 0.5s forwards';
+    backButton.style.display = 'none';
+    
+
+    chapterContent3Div.innerHTML = `
+        <div class="chapter-buttons"> <button class="button-style" <button <button
+        <button class="button-style" onclick="openExperimentVideo('https://youtu.be/1Ppr6JPRfPw?si=k-i3_X76xta411B2')">Experiment 1</button>
+        <button class="button-style" onclick="openExperimentVideo('https://youtu.be/dpXn0V2mIFM?si=EHUFo3gRwFZEcYna')">Experiment 2</button>
+        <button class="button-style" onclick="openExperimentVideo('https://youtu.be/qUVpDsoLVn@?si=ZJzicSgng0zt83me')">Experiment 3</button>
+        <button  class="button-style" onclick="openExperimentVideo('https://youtu.be/ixjdffCuEnA?si=Q1_c_VTPvivDFgUB')">Experiment 4</button> 
+        <button class="button-style" onclick="openExperimentVideo('https://youtu.be/n8JW-8Yvi_E?si=vRLIJGQLVGPXvgpo')">Experiment 5</button>
+        <button  class="button-style" onclick="openExperimentVideo('https://youtu.be/6pUU9Kv7tgo?si=2zaFIrVK7AFW0bbM')">Experiment 6</button>
+        </div>
+        <button id="backButton" class="back-button" onclick="showMainContent()">Back</button>
+      `;
+      showContent('chapterContent3');
+}
+function home(){
+        const mainContentDiv = document.getElementById("mainContent");
+        const chapterContent1Div = document.getElementById("chapterContent1");
+        const chapterContent2Div = document.getElementById("chapterContent2");
+        const chapterContent3Div = document.getElementById("chapterContent3");
+        const backButton= document.getElementById("backButton");
+        
+
+        chapterContent1Div.classList.remove('show');
+        chapterContent2Div.classList.remove('show');
+        chapterContent3Div.classList.remove('show');
+        mainContentDiv.style.display ='flex';
+        mainContentDiv.style.animation = 'fadeInUp 0.5s forwards';
+        mainContentDiv.style.opacity = '1';
+        mainContentDiv.style.transform = 'scale (1) ';
+        backButton.style.display= 'none';
+        
+        
+
+}
+function about(){
+    const mainContentDiv = document.getElementById("mainContent");
+    const chapterContent4Div = document.getElementById("chapterContent4");
+    const backButton = document.getElementById("backButton");
+    
+    const overlay= document.getElementById("overlay");
+    const overlay3 = document.getElementById("overlay3");
+
+    mainContentDiv.style.display='none';
+    chapterContent4Div.classList.add('show');
+    overlay.classList.add('show');
+    overlay3.classList.add('show');
+    mainContentDiv.style.animation='fadeOutDown 0.5s forwards';
+    chapterContent4Div.style.animation = 'fadeInUp 0.5s forwards';
+    backButton.style.display = 'none';
+   
+
+
+    chapterContent4Div.innerHTML=`
+            <div class="card">
+                <h1>ABOUT</h1>
+                  <p>"Hello. My name is Samuel Raj. I am a Chemistry Pal Leader for the session 2023/2024. At that time, I was very grateful for my position because I can help my college friends without expecting anything in return. I like to help them to make understand the topics and guide them with questions that they don't understand. I often make sessions with those who wants. Now in my spare time, I'm practicing programming because I want to pursue my first degree in computer science field majoring in AI/software engineer.With knowledge of programming, I started to create a chemistry website. This is not an expert website but at least I tried my best to create and I've provided materials. With the hope that students would use it, I built websites for both semesters. Here is the link for "<a href="https://sam-codecode.github.io/chemistry-semester1/" target="_blank">Chemistry Semester 1</a> </p>
+               </div>
+               <button id="backButton" class="back-button" onclick="showMainContent()">Back</button>
+      `;
+            showContent('chapterContent4');
+        }
+
+        function contact(){
+            const mainContentDiv = document.getElementById("mainContent");
+            const chapterContent5Div = document.getElementById("chapterContent5");
+            const backButton = document.getElementById("backButton");
+            const overlay= document.getElementById("overlay");
+            const overlay3 = document.getElementById("overlay3");
+
+            mainContentDiv.style.display='none';
+            chapterContent5Div.classList.add('show');
+            overlay.classList.add('show');
+            overlay3.classList.add('show');
+            mainContentDiv.style.animation='fadeOutDown 0.5s forwards';
+            chapterContent5Div.style.animation = 'fadeInUp 0.5s forwards';
+            backButton.style.display = 'none';
+   
+
+
+        chapterContent5Div.innerHTML=`
+            <div class="card">
+                <h1>CONTACT</h1>
+                  <div class="icons">
+                    <a  href="https://www.instagram.com/samuel_official_oo?igsh=aGgwcjN1eTQzMHkw" target="_blank"><i class="ri-instagram-line"></i></a>
+                    <a  href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKhbzLphFVTkZdFLgvsJhPMwcFQVVDFvmKWhFPGrkBSWktJPshrmzCwXXKRVjbXdHpvSqbh" target="_blank"><i class="ri-mail-line"></i></a>
+                 </div>
+                </div>
+               <button id="backButton" class="back-button" onclick="showMainContent()">Back</button>
+      `;
+            showContent('chapterContent5');
+        }
+
+        function showMainContent(){
+        const mainContentDiv = document.getElementById("mainContent");
+        const chapterContent1Div = document.getElementById("chapterContent1");
+        const chapterContent2Div = document.getElementById("chapterContent2");
+        const chapterContent3Div = document.getElementById("chapterContent3");
+        const chapterContent4Div = document.getElementById("chapterContent4");
+        const chapterContent5Div = document.getElementById("chapterContent5");
+        const backButton= document.getElementById("backButton");
+        
+        const overlay = document.getElementById("overlay");
+        const overlay2 = document.getElementById("overlay2");
+        const overlay3 = document.getElementById("overlay3");
+    
+
+        chapterContent1Div.classList.remove('show');
+        chapterContent2Div.classList.remove('show');
+        chapterContent3Div.classList.remove('show');
+        chapterContent4Div.classList.remove('show');
+        chapterContent5Div.classList.remove('show');
+        overlay.classList.remove('show');
+        overlay2.classList.remove('show');
+        overlay3.classList.remove('show');
+
+        mainContentDiv.style.display ='flex';
+        mainContentDiv.style.animation = 'fadeInUp 0.5s forwards';
+        mainContentDiv.style.opacity = '1';
+        mainContentDiv.style.transform = 'scale (1) ';
+        backButton.style.display ='none';
+        
+        }
+       
+
+        function openPdf(pdfUrl) {
+            window.open(pdfUrl, '_blank');
+        }
+
+        function openLectureVideo(lectureLink) {
+            window.open(lectureLink, '_blank');
+        }
+
+        function openExperimentVideo(experimentLink) {
+            window.open(experimentLink, '_blank');
+        }
+</script>
+</body>
+</html>   
+
+
